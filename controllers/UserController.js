@@ -35,7 +35,7 @@ const editUser = async (req, res) =>{
 }
 
 const updateUser = async (req, res) =>{
-  const {id} = req.params.id;
+  const {id} = req.params;
   const data = req.body
   const selector ={where:{id:id}}
 await User.update(data,selector)
@@ -60,10 +60,9 @@ const deleteUser = async (req, res) =>{
     where :{id :id},
     raw:true
   },
-  console.log(id)
   ).catch(error => console.log(error))
-
-   await  res.redirect('/')
+ 
+    res.redirect('/')
 }
 
 module.exports ={

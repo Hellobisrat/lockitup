@@ -1,6 +1,6 @@
 const express = require('express');
 const router =express.Router();
-const  {allUsers,userForm,saveUser, editUser, updateUser, viewUser}= require('../controllers/UserController')
+const  {allUsers,userForm,saveUser, editUser, updateUser, viewUser, deleteUser}= require('../controllers/UserController')
 
 router.get('/',allUsers)
 
@@ -13,6 +13,8 @@ router.get('/edit/:id',editUser)
 router.post('/update/:id',updateUser)
 
 router.get('/user/:id',viewUser)
+
+router.get('/delete/:id',deleteUser)
 
 
 

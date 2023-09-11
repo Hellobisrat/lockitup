@@ -1,6 +1,6 @@
 <h1>Edit user</h1>
 <a class="btn btn-primary" href="/">All Users</a>
-<form >
+<form  action="/update/{{user.id}}" method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1">Name</label>
     <input type="text" name="name" value="{{user.name}}" class="form-control">
